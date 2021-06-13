@@ -1,0 +1,35 @@
+:root {
+    --hover-color: rgba(50, 138, 238, 0.5);
+}
+
+.square {
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+}
+
+.square.holder {
+    cursor: pointer;
+}
+
+.square.holder:hover {
+    background-color: var(--hover-color);
+}
+
+.number-list {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% / 3);
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.number-list > div {
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.number-list > div:hover {
+    color: var(--hover-color);
+}
