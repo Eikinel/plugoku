@@ -1,19 +1,26 @@
 :root {
     --hover-color: rgba(50, 138, 238, 0.5);
+    --selected-color: rgba(238, 225, 50, 0.5);
 }
 
 .square {
     display: flex;
     flex-flow: row wrap;
-    width: calc(100% / 3);
-    height: calc(100% / 3);
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .square.holder {
+    font-size: 2.5vw;
     cursor: pointer;
 }
 
-.square.holder:hover {
+.square.selected {
+    background-color: var(--selected-color);
+}
+
+.square.holder:not(.selected):hover {
     background-color: var(--hover-color);
 }
 
@@ -27,7 +34,7 @@
 
 .number-list > div {
     cursor: pointer;
-    font-size: 32px;
+    font-size: 4vw;
 }
 
 .number-list > div:hover {
